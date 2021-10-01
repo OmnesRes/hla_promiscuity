@@ -16,11 +16,11 @@ else:
 
 
 ##get original kl values
-fig1_data = pd.read_csv(cwd / 'data' / 'fig1_source_data.csv')
+fig1_data = pd.read_csv(cwd / 'data' / 'fig1_source_data.csv') #from https://www.nature.com/articles/s43018-021-00226-4
 original = {'HLA-' + i[0] + '*' + i[1:]: j for i, j in zip(fig1_data['Allele name'].values, fig1_data['Allele promiscuity'].values)}
 
 ##the peptides they used
-mhc_df = pd.read_csv(cwd / 'data' / 'mhc_ligand.txt', sep='\t')
+mhc_df = pd.read_csv(cwd / 'data' / 'mhc_ligand.txt', sep='\t') #from https://www.nature.com/articles/s43018-021-00226-4
 mhc_df['Description'] = mhc_df['Description'].str.upper()
 mhc_df['Allele Name'] = mhc_df['Allele Name'].str.replace(':', '')
 
