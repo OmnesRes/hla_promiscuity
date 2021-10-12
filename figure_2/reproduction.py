@@ -7,10 +7,10 @@ from kl import kl
 
 import pathlib
 path = pathlib.Path.cwd()
-if path.stem == 'iedb':
+if path.stem == 'hla_promiscuity':
     cwd = path
 else:
-    cwd = list(path.parents)[::-1][path.parts.index('iedb')]
+    cwd = list(path.parents)[::-1][path.parts.index('hla_promiscuity')]
     import sys
     sys.path.append(str(cwd))
 
